@@ -15,3 +15,21 @@ toggleMenu.addEventListener("change", function() {
     menu.style.display = "none";
   }
 });
+
+/*
+  Rediseño del scroll
+*/
+// Función para añadir el estilo personalizado al scrollbar
+function customScrollbar() {
+  // Selecciona todos los elementos con overflow scroll
+  const elementsWithOverflow = document.querySelectorAll('[style*="overflow-y: scroll"]');
+  
+  // Itera sobre cada elemento con overflow
+  elementsWithOverflow.forEach(element => {
+    // Añade una clase personalizada al elemento
+    element.classList.add('custom-scrollbar');
+  });
+}
+
+// Ejecuta la función cuando la página esté cargada
+document.addEventListener("DOMContentLoaded", customScrollbar);

@@ -95,7 +95,7 @@ svg {
 }
 
 .menu-icon.active {
-  filter: brightness(0.5);
+  filter: invert(0.7);
 }
 
 .menu-desplegable {
@@ -150,9 +150,9 @@ main nav ul li a{
 }
 main .container-banner {
   width: 100%;
-  background-color: #253781;
   display: flex;
   justify-content: center;
+  background-color: #253781;
 }
 main .container-banner div img {
   width: 100%;
@@ -161,98 +161,370 @@ main .container-banner div img {
 
 main .catalogo {
   width: 100%;
-  padding: 10px;
+  padding: 50px 5px 50px 5px;
   display: flex;
   flex-direction: column;
   max-width: 90%;
   max-width: 1200px;
+  align-items: center;
 }
 main .catalogo h2 {
   font-size: 2.7rem;
   font-style: italic;
+  padding-left: 20%;
+  align-self: flex-start;
 }
 
-#Buscador {
-  background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
-  background-size: 24px;
-  width: 300px;
-  border: transparent;
-  border-bottom: solid 1px #ccc;
-  padding: 10px 10px 10px 30px;
-  outline: none;
-  align-self: center;
-  font-size: 1.7rem;
-  margin: 20px 0;
+/*
+  CSS MENÚ CONTEXTUAL
+*/
+main .menu__caja {
+  width: 100%;
+  height: calc(100vh - 150px);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(255,255,255,0.81);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(255,255,255,0.81);
+  box-shadow: 0px 0px 20px 2px rgba(255,255,255,0.81);
+  max-width: 750px;
 }
-main .catalogo .contenedor-tipos {
-  max-width: 1000px;
+main .menu__caja>h3 {
+  color: #c4c4c4;
+  font-size: 2.5rem;
+  font-style: italic;
+  padding: 5px;
+  margin-top: 10px;
+}
+main .menu__caja .menu__lista {
+  width: 100%;
+  height: 50px;
+}
+main .menu__caja .entrada {
+  width: 100%;
+  min-width: 200px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.entrada .buscador {
+  width: 90%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.buscador input {
+      width: 100%;
+      height: 30px;
+      min-width: 150px;
+      max-width: 400px;
+      padding: 0 10px;
+      border: none;
+      background: transparent;
+      color: black;
+      font-size: 1.7rem;
+}
+.buscador input:focus {
+  outline: none;
+}
+.buscador hr {
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.452);
+  margin: 0 auto 20px auto;
+}
+.entrada #boton {
+  width: 10%;
+  background-image: url("./needables/imgs/icon_search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  filter: invert(1);
+  margin-right: 10px;
+}
+main .proyectos {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  max-height: 780px;
+  min-height: 150px;
+  margin: 20px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+}
+.proyecto {
+  width: 100%;
+  display: flex;
+  padding: 10px ;
+}
+.proyectos {
+  color: #ffffff;
+  font-size: 1,5rem;
+}
+.proyectos h4{
+  color: #000000;
+  font-size: 1.3rem;
+  padding: 10px;
+  text-align: center;
+}
+.proyecto > .servicio {
+  width: 10%;
+  min-width: 70px;
+  min-height: 70px;
+  display: flex;
+}
+.proyecto .servicio img {
+ width: 100%;
+ margin: auto;
+}
+.proyecto .descripcion {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 2px 10px;
+  margin: 0px auto 0px 5px;
+  justify-content: space-around;
+}
+.descripcion .name {
+  text-decoration: none;
+}
+.descripcion .name h3{
+  color: rgb(0, 0, 0);
+  font-size: 1.8rem;
+  padding: 5px 0;
+}
+.__desc {
+  padding-left: 5px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.__desc h5 {
+  font-size: 1.3rem;
+}
+.__desc span {
+  padding-left: 10px;
+  font-size: 1.3rem;
+}
+.__desc span strong {
+  font-size: 1.2rem;
+}
+.descripcion p {
+  font-size: 1.5rem;
+  padding: 1px 0;
+}
+.descripcion h4 {
+  font-size: 1.7rem;
+  padding: 1px 0;
+}
+.descripcion .formatos {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.descripcion .formatos .agregar-carrito{
+  background-color: rgba(4, 0, 255, 0.649);
+  color: rgb(248, 248, 248);
+  font-weight: 400;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px 0;
+  padding: 5px;
+}
+.formatos > div {
+  margin: 5px;
+  border-radius: 4px;
+  padding: 5px;
+}
+.formatos .price {
+  width: 50px;
+  background-color: rgb(235, 200, 3);
+  color: rgb(76, 3, 3);
+  font-weight: 400;
+}
+.formatos .price p {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+.proyectos .hr {
+  margin: 0 auto;
+  width: 90%;
+  height: 1px;
+  background-color: #2537815e;
+}
+/*
+  FIN CSS MENÚ CONTEXTUAL
+*/
+
+main .contenedor-tipos {
+  max-width: 800px;
   width: 90%;
   display: flex;
   flex-direction: column;
   align-self: center;
+  align-items: flex-start;
+  padding-bottom: 20px;
 }
-main .catalogo .contenedor-tipos h2{
-  font-size: 2.3rem;
-  padding: 10px 0 10px 20%;
-}
-main .catalogo .contenedor-tipos .coleccion {
-  width: 80%;
-  align-self: center;
+main .contenedor-tipos h2{
+  font-size: 2rem;
   padding: 10px;
 }
-main .catalogo .contenedor-tipos .coleccion .libro {
+main .contenedor-tipos hr{
+  width: 34%;
+  height: 1px;
+  background-color: #000000;
+}
+main .contenedor-tipos .coleccion {
+  align-self: center;
+  width: 95%;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: #00000018;
+  padding: 5px;
+}
+main .contenedor-tipos .coleccion .libro {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+  margin: 5px;
 }
 .ejemplar {
-  background-color: #81255c1e;
-  max-width: 220px;
-  padding: 10px;
+  min-width: 180px;
+  margin: 10px;
   border-radius: 10px;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  height: 350px;
+}
+.ejemplar .tittle {
+  font-size: 1.3rem;
+  padding: 10px 0;
+}
+.ejemplar .portada {
+  width: 65%;
   margin: 5px;
-  min-width: 220px;
 }
-.ejemplar h3 {
-  font-size: 1.8rem;
+.ejemplar>strong,p {
+  font-size: 1.1rem;
+  width: 90%;
+  padding: 3px;
+}
+.ejemplar .price {
+  display: flex;
+  width: 70%;
+  flex-direction: row;
   padding: 5px;
+  justify-content: space-between;
 }
-.ejemplar strong {
-  font-size: 1.4rem;
-  padding: 5px;
-}
-.ejemplar p {
+.ejemplar .price > span {
   font-size: 1.2rem;
-}
-.ejemplar .boton {
-  margin: 15px 0 5px 0;
-  font-size: 1.4rem;
-  background-color: rgba(255, 255, 0, 0.501);
+  padding: 7px;
   border-radius: 5px;
-  border: 1px solid black;
-  padding: 5px;
-  max-width: 150px;
-  align-self: center;
+  background-color: #dbff6d;
 }
-.ejemplar .boton:hover {
+.ejemplar .price > button {
+  background-image: url("./needables/BD_imgs/shopping-cart-16-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-}
-.ejemplar .boton:active {
-  background-color: rgba(150, 78, 10, 0.545);
+  background-color: #25378150;
 }
 
+/*
+  Rediseño del Scroll Bar
+*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #d55959;
+}
+/*
+  Fin del rediseño del scroll bar
+*/
 footer {
   background-color: #253781;
   width: 100%;
-  height: 200px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
-footer h2{
-  color: white;
-  font-size: 3rem;
+footer .container_contact {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 250px;
+  margin: 10px;
+}
+footer .container_contact h2 {
+  color: #ffffff7c;
+  font-size: 4rem;
+  padding: 10%;
+}
+footer .container_contact .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+}
+footer .container_contact .info p {
+  color: #ffffff7c;
+  font-size: 1.3rem;
+}
+footer .container_map {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container_map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  min-width: 300px;
+  border-radius: 10px;
 }
