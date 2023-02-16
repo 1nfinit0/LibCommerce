@@ -33,3 +33,17 @@ function customScrollbar() {
 
 // Ejecuta la función cuando la página esté cargada
 document.addEventListener("DOMContentLoaded", customScrollbar);
+
+
+
+// código para el menú desplegable del carrito
+const carInput = document.getElementById('car');
+const navCar = document.querySelector('.nav-car');
+
+carInput.addEventListener('change', () => {
+  if (carInput.checked) {
+    navCar.style.display = 'block';
+  } else {
+    navCar.style.display = 'none';
+  }
+});

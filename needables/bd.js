@@ -1,18 +1,29 @@
-const carrito = [];
+const contactLinks = document.querySelector('#contact'); // Obtener el enlace con el ID "contact"
+contactLinks.addEventListener('click', (event) => { // Agregar un evento de clic al enlace
+  event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace (que navegue a otra página)
+  const contactSection = document.querySelector('footer'); // Obtener la sección de contacto (o cualquier otra sección que desees)
+  contactSection.scrollIntoView({ behavior: 'smooth' }); // Desplazar la página hasta la sección de contacto con una animación suave
+});
 
-const agregarAlCarrito = (id) => {
-  carrito.push(id);
-  localStorage.setItem('carrito', JSON.stringify(carrito));
+const contactLink = document.querySelector('nav a#contact'); // Obtener el enlace con el ID "contact" dentro de la etiqueta nav
+const mq = window.matchMedia('(max-width: 767px)'); // Obtener el media query para pantallas menores a 768px
+
+function handleMediaQuery(mq) {
+  if (mq.matches) { // Si la pantalla es menor a 768px
+    contactLink.addEventListener('click', (event) => { // Agregar un evento de clic al enlace
+      event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace (que navegue a otra página)
+      const contactSection = document.querySelector('footer'); // Obtener la sección de contacto (o cualquier otra sección que desees)
+      contactSection.scrollIntoView({ behavior: 'smooth' }); // Desplazar la página hasta la sección de contacto con una animación suave
+    });
+  } else { // Si la pantalla es mayor o igual a 768px
+    contactLink.removeEventListener('click', () => {}); // Eliminar el evento de clic del enlace
+  }
 }
 
-const promo = document.getElementById("contactox");
-promo.addEventListener("click", function() {
-  window.scroll({
-    top: 3000,
-    left: 0,
-    behavior: 'smooth'
-    });
-});
+mq.addListener(handleMediaQuery); // Agregar un listener al media query para que se ejecute cuando cambie
+handleMediaQuery(mq); // Ejecutar la función handleMediaQuery() al cargar la página
+
+
 
 /*
 Código del menú, la constante "files" representa una matriz de objetos, cada objeto representa un producto, este se filtra por el codigo de debajo
@@ -324,7 +335,7 @@ const filtrar = () => {
                 <div class='price'>
                   <p>S/. ${file.price}</p>
                 </div>
-                <button class="agregar-carrito" data-id="${file.id}">Agregar al carrito</button>
+                <button class="agregar-carrito activo" data-id="${file.id}">Agregar al carrito</button>
               </div>
             </div>
           </div>
@@ -338,19 +349,6 @@ const filtrar = () => {
   }
 
 }
-
-
-// Agregar listener de eventos a cada botón "agregar al carrito"
-const botonesAgregarAlCarrito = document.querySelectorAll('.agregar-carrito');
-botonesAgregarAlCarrito.forEach((boton) => {
-  boton.addEventListener('click', (evento) => {
-    const id = evento.target.dataset.id;
-    agregarAlCarrito(id);
-  });
-});
-
-
-
 boton.addEventListener('click', filtrar);
 formulario.addEventListener('keyup', filtrar);
 filtrar();

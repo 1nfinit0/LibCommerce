@@ -65,21 +65,21 @@ header div ul li a{
   .menu {
     display: none;
   }
-  label {
+  .label1 {
     display: block;
   }
 }
 @media (min-width: 768px) {
-  label {
+  .label1 {
     display: none;
   }
 }
 
-input[type="checkbox"] {
+#toggle-menu[type="checkbox"] {
   display: none;
 }
 
-label {
+.label1 {
   cursor: pointer;
 }
 
@@ -112,7 +112,7 @@ main {
   flex-direction: column;
   align-items: center;
 }
-main nav {
+main .menu-desplegable {
   z-index: 999;
   width: 100%;
   padding: 10px;
@@ -127,23 +127,23 @@ main nav {
   position: fixed;
   background-color: #fff;
 }
-main nav ul {
+main .menu-desplegable ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main nav ul li{
+main .menu-desplegable ul li{
   padding: 7px;
   border-radius: 3px;
   font-size: 1.4rem;
   color: black;
 }
-main nav ul li:active{
+main .menu-desplegable ul li:active{
   border-radius: 5px;
   background-color: rgba(199, 133, 217, 0.284);
 }
-main nav ul li a{
+main .menu-desplegable ul li a{
   text-decoration: none;
   color: black;
   font-size: 1.3rem;
@@ -180,7 +180,6 @@ main .catalogo h2 {
 */
 main .menu__caja {
   width: 100%;
-  height: calc(100vh - 150px);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -346,7 +345,13 @@ main .proyectos {
   cursor: pointer;
   margin: 5px 0;
   padding: 5px;
+  transition: background-color 0.3s ease;
 }
+.descripcion .formatos .agregar-carrito:hover {
+  background-color: rgb(153, 0, 255);
+}
+
+
 .formatos > div {
   margin: 5px;
   border-radius: 4px;
@@ -477,6 +482,81 @@ main .contenedor-tipos .coleccion .libro {
 /*
   Fin del rediseño del scroll bar
 */
+/*
+  Diseño del botón de carrito
+*/
+#car-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #00f421;
+  background-image: url("./needables/BD_imgs/shopping-cart-16-svgrepo-com.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 100;
+  border: none;
+  box-shadow: 0 0 10px 0 #000000;
+  filter: opacity(0.5);
+}
+#car {
+  display: none;
+}
+/* Código para cuando el input esté activado cambiar el color de #car-button a Rojo*/
+#car:checked ~ #car-button {
+  background-color: #ff9900;
+}
+
+main .nav-car {
+  position: fixed;
+  bottom: 85px;
+  right: 85px;
+  width: 150px;
+  height: 100px;
+  background-color: #ffffffd3;
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 0 10px 0 #000000;
+  
+}
+main .nav-car ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+main .nav-car ul li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000000;
+  padding: 5px;
+  border-radius: 5px;
+}
+main .nav-car ul li .ver-carrito {
+  background-color: #3b54b8;
+  color: #ffffff;
+}
+main .nav-car ul li .vaciar {
+  background-color: #8a0101;
+  color: #ffffff;
+  padding: 5px;
+}
+
+
+
 footer {
   background-color: #253781;
   width: 100%;

@@ -124,7 +124,7 @@ for(let file of libIngles){
       <strong>Contenido:&nbsp;</strong><p>${file.content}</p>
       <div class="price">
         <span>S/.&nbsp;${file.price}</span>
-        <button class="btn"></button>
+        <button class="agregar-carrito" data-id="${file.id}"></button>
       </div>
     </div>
       `;
