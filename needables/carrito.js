@@ -1,10 +1,5 @@
-// Obtener todos los botones con data-id
-const addToCartButtons = document.querySelectorAll('button[data-id]');
+const addToCartButtons = document.querySelectorAll('.agregar-carrito');
 
-
-
-
-// Agregar un evento de clic a cada botón
 addToCartButtons.forEach(button => {
   button.addEventListener('click', () => {
     const productId = button.getAttribute('data-id');
@@ -22,4 +17,15 @@ addToCartButtons.forEach(button => {
 
     localStorage.setItem('carrito', JSON.stringify(cart)); // Guardar el carrito actualizado en el almacenamiento local
   });
+});
+
+
+//Vaciado del carrito
+const vaciarBtn = document.querySelector('.vaciar');
+vaciarBtn.addEventListener('click', () => {
+  if (confirm('¿Seguro que desea vaciar el carrito?')) {
+    // Si el usuario hace clic en "Aceptar", borrar el carrito del almacenamiento local
+    localStorage.removeItem('carrito');
+    alert('El carrito ha sido vaciado');
+  }
 });
