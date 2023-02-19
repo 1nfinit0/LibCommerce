@@ -384,3 +384,13 @@ const btnRefrescar = document.querySelector('.refresh');
 btnRefrescar.addEventListener('click', () => {
     location.reload();
 });
+
+//Botón de compra
+const finalLink = document.querySelector('a.final'); // seleccionar el elemento a con la clase "final"
+function actualizarFinalLink() {
+    const productosTexto = productosSeleccionados.map(producto => `- ${producto.titulo} x${producto.quantity}`).join('%0A');
+    const precioTotal = sumarPreciosTotales();
+  
+    finalLink.href = `https://wa.me/+51922917150?text=Hola%21%20quisiera%20continuar%20con%20mi%20compra%3A%0A${productosTexto}%0ACon%20costo%C2%A0final%C2%A0%3D%C2%A0S%2F.${precioTotal}`;
+  }
+actualizarFinalLink();

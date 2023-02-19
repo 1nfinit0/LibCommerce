@@ -77,6 +77,8 @@ main .container-payment {
   border-radius: 10px;
   max-width: 450px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main .container-productos .productos-tittle{
   width: 90%;
@@ -129,12 +131,12 @@ main .container-productos .container-items .item .item-info {
 }
 main .container-productos .container-items .item .item-info h3 {
   color: rgb(255, 255, 255);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   padding: 5px 2px;
 }
 main .container-productos .container-items .item .item-info p {
   color: rgb(255, 255, 255);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   padding: 5px 2px;
 }
 main .container-productos .container-items .item .item-info .item-info__prices {
@@ -177,6 +179,51 @@ main .container-productos .container-items .item .item-info .item-info__prices .
   padding: 0px 5px;
 }
 
+main .container-payment .payment-info {
+  width: 90%;
+  max-height: 400px;
+  padding: 10px 5px;
+  background-color: #1d3f3e;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .container-payment .payment-info h2 {
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  padding: 10px 5px;
+  text-align: center;
+}
+main .container-payment .payment-info img {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 0px;
+}
+main .container-payment .payment-info a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  margin: 10px 0px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.3rem;
+  width: 120px;
+}
+main .container-payment .payment-info a:hover {
+  background-color: #0000005c;
+  color: #f2f2f2;
+}
+main .container-payment .payment-info a:active {
+  background-color: #0000005c;
+  color: #f2f2f2;
+}
+
 
 
 main .container-productos .price-total {
@@ -196,8 +243,6 @@ main .container-productos .price-total .priceTT {
   font-size: 1.6rem;
   margin-left: 15px;
 }
-
-
 footer {
   -webkit-box-shadow: inset 0px 0px 39px -10px rgba(0,0,0,0.46);
   -moz-box-shadow: inset 0px 0px 39px -10px rgba(0,0,0,0.46);
