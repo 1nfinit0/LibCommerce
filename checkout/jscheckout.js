@@ -282,36 +282,105 @@ const productosSeleccionados = files.filter(file => {
   const item = carrox.find(item => item.id.toString() === file.id.toString());
   if (item) {
     file.quantity = item.quantity;
+    file.pricetotal = item.quantity * file.price;
     return true;
   }
   return false;
 });
+localStorage.setItem('carrito', JSON.stringify(productosSeleccionados));
 
 // //Renderizamos los prudustos dentro del div "container-items"
 const container = document.querySelector('.container-items');
-for (const producto of productosSeleccionados) {
-  const item = document.createElement('div');
-  item.classList.add('item');
-  item.innerHTML = `
-    <img src="${producto.src}" alt="${producto.alt}">
-    <h3>${producto.titulo}</h3>
-    <p>${producto.content}</p>
-    <p>Precio: $${producto.price}</p>
-    <p>Cantidad: ${producto.quantity}</p>
-  `;
-  container.appendChild(item);
+function renderizarProductos() {
+    const container = document.querySelector('.container-items');
+    const priceDiv = document.querySelector('.priceTT');
+    container.innerHTML = '';
+    for (const producto of productosSeleccionados) {
+      const item = document.createElement('div');
+      item.classList.add('item');
+      item.innerHTML = `
+        <img src="${producto.src}" alt="${producto.alt}" class="item-pic">
+        <div class="item-info">
+            <h3>${producto.titulo}</h3>
+            <p>${producto.content}</p>
+            <div class="item-info__prices">
+                <p>Precio unidad:<br>S/. ${producto.price}</p>
+                <p class="priceTotal" data-id="${producto.id}">Precio pack:<br>S/. ${producto.pricetotal}</p>
+                <div class="cantidad"><button class="quitar" data-id="${producto.id}">-</button><div class="unidades">${producto.quantity}</div><button class="agregar" data-id="${producto.id}">+</button></div>
+            </div>
+        </div>
+      `;
+      container.appendChild(item);
+    }
+    priceDiv.innerHTML = `S/. ${sumarPreciosTotales()}`;
+  }
+renderizarProductos();
+
+//Modificando el valor de quantity de la matriz de acuerdo a los botones:
+const botones = document.querySelectorAll('.quitar, .agregar');
+
+botones.forEach(boton => {
+  boton.addEventListener('click', () => {
+    const idProducto = boton.getAttribute('data-id');
+    const producto = encontrarProductoPorId(idProducto);
+    
+    if (boton.classList.contains('agregar')) {
+      producto.quantity += 1;
+      producto.pricetotal = producto.quantity * producto.price;
+      
+    } else {
+      producto.quantity -= 1;
+      producto.pricetotal = producto.quantity * producto.price;
+      eliminarProductoSiCero(producto);
+    }
+
+    actualizarProductosSeleccionados(producto);
+    actualizarInterfazDeUsuario(producto);
+  });
+});
+
+function sumarPreciosTotales() {
+    let total = 0;
+    productosSeleccionados.forEach(producto => {
+      total += producto.pricetotal;
+    });
+    return total;
+  }
+
+function encontrarProductoPorId(id) {
+  // Buscar el producto correspondiente en la matriz productosSeleccionados utilizando el ID como clave
+  return productosSeleccionados.find(producto => producto.id == id);
 }
 
+function actualizarProductosSeleccionados(producto) {
+  // Actualizar la matriz productosSeleccionados con el producto modificado
+  const index = productosSeleccionados.findIndex(p => p.id == producto.id);
+  productosSeleccionados[index] = producto;
+  localStorage.setItem('carrito', JSON.stringify(productosSeleccionados));
+}
 
+function actualizarInterfazDeUsuario(producto) {
+    // Buscar el elemento de la interfaz de usuario que corresponde al producto
+    const priceTotal = document.querySelector(`.priceTotal[data-id="${producto.id}"]`);
+    const item = document.querySelector(`.item .cantidad [data-id="${producto.id}"]`).parentNode;
+    const priceTT = document.querySelector('.priceTT');
+    // Actualizar la cantidad de unidades
+    priceTotal.textContent = `Precio pack: S/. ${producto.pricetotal}`;
+    item.querySelector('.unidades').textContent = producto.quantity;
+    priceTT.textContent = `S/. ${sumarPreciosTotales()}`;
+}
 
-// carItems.forEach((item) => {
-//   const product = document.createElement("div");
-//   product.classList.add("product");
-//   product.innerHTML = `
-//     <img src="${item.image}" alt="${item.name}">
-//     <h3>${item.name}</h3>
-//     <p>Price: $${item.price}</p>
-//     <p>Quantity: ${cart.find((cartItem) => cartItem.id === item.id).quantity}</p>
-//   `;
-//   container.appendChild(product);
-// });
+function eliminarProductoSiCero(producto) {
+    // Buscar el índice del producto en la matriz productosSeleccionados
+    const index = productosSeleccionados.findIndex(p => p.id == producto.id);
+    
+    // Si la cantidad del producto es igual a cero, eliminar el producto de la matriz productosSeleccionados
+    if (producto.quantity == 0) {
+        productosSeleccionados.splice(index, 1);
+    }
+  }
+//Botón de refresco de página
+const btnRefrescar = document.querySelector('.refresh');
+btnRefrescar.addEventListener('click', () => {
+    location.reload();
+});
