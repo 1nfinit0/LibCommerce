@@ -53,7 +53,9 @@ header .container-pageback a img{
   cursor: pointer;
 }
 /*
-MAIN
+
+  MAIN
+
 */
 main {
   display: flex;
@@ -65,92 +67,72 @@ main {
 }
 main .container-tittle {
   width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  height: 60px;
-  padding: 0 2px;
-}
-main .container-tittle .tittle {
   display: flex;
   justify-content: center;
-  color: #f2f2f2;
-  font-size: 2rem;
-  align-self: center;
+  align-items: center;
+  padding: 20px 0;
+}
+main .container-tittle h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
-main .container-tittle .year {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  color: #f2f2f2;
-  font-size: 2rem;
-  background-color: red;
-  align-items: center;
-  padding: 0 10px;
-  border-radius: 0 0 10px 10px;
-  font-weight: 700;
-}
-main .coleccion {
+/* Estilos para pantallas grandes */
+.container-chart {
   width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 10px 5px;
 }
-main .coleccion .coleccion-tittle img{
+
+.tftable {
   width: 100%;
-  max-width: 200px;
+  min-width: 370px;
+  font-size:12px;
+  color:#333333;
+  width:100%;
+  border-width: 1px;
+  border-color: #729ea5;
+  border-collapse: collapse;
 }
-main .coleccion .promo {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-items: center;
-  align-items: center;
-  justify-content: space-around;
+
+.tftable th{
+  font-size: 1.2rem;
+  background-color:#acc8cc;
+  border-width: 1px;
+  padding: 8px 4px;
+  border-style: solid;
+  border-color: #729ea5;
+  text-align:center;
 }
-main .coleccion .promo .coleccion-imagen {
-  width: 30%;
-  min-width: 200px;
-  display: flex;
-  justify-content: center;
+.tftable tr{
+  background-color:#d4e3e5;;
 }
-main .coleccion .promo .coleccion-imagen img {
-  width: 100%;
-  max-width: 300px;
+.tftable td {
+  font-size: 1.1rem;
+  border-width: 1px;
+  padding: 4px 4px;
+  border-style: solid;
+  border-color: #729ea5;
+  text-align:center;
 }
-main .coleccion .promo .coleccion-info {
-  width: 70%;
-  padding: 5px;
-  min-width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .container-chart {
+    overflow-x: scroll;
+  }
 }
-main .coleccion .promo .coleccion-info h2 {
-  color: #f2f2f2;
-  font-size: 1.6rem;
-  text-align: center;
-  padding: 10px 0;
-}
-main .coleccion .promo .coleccion-info p {
-  color: #f2f2f2;
-  font-size: 1.3rem;
-  padding: 10px 0;
-}
-main .coleccion .promo .coleccion-info p strong {
-  color: #f2f2f2;
-  font-size: 1.3rem;
-  text-align: center;
-}
-/*fin del main*/
+
+
+/*
+
+  FIN DEL MAIN
+
+*/
 footer {
   -webkit-box-shadow: inset 0px 0px 39px -10px rgba(0,0,0,0.46);
   -moz-box-shadow: inset 0px 0px 39px -10px rgba(0,0,0,0.46);
