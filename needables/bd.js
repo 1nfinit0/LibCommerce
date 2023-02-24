@@ -30,11 +30,19 @@ Código del menú, la constante "files" representa una matriz de objetos, cada o
 */
 
 const files = [
+    {   src: './needables/imgs/tittle_1_precio.png',
+      titulo: 'Mi Mundo CLic PACK x10',
+      nivel: 'Educación Inicial 3, 4, 5 años.',
+      content: 'Matemática + RM Tomo I y II, Comunicación + RV, Grafomotricidad, Inglés, Construyendo Valores, Fonología, Cuento, Personal Social-Religión-Ciencia y Tecnología, Cuento del Bicentenario y Cartilla con QR´s',
+      price: 240.00,
+      id: 35,
+      alt: 'English’s Clic 3 Años'
+  },
   {   src: './needables/BD_imgs/ingles3inicial.png',
       titulo: 'English’s Clic 3 Años',
       nivel: 'Educación Inicial',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 14.00,
+      price: 95.00,
       id: 1,
       alt: 'English’s Clic 3 Años'
   },
@@ -42,7 +50,7 @@ const files = [
       titulo: 'English’s Clic 4 Años',
       nivel: 'Educación Inicial',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 2,
       alt: 'English’s Clic 4 Años'
   },
@@ -50,7 +58,7 @@ const files = [
       titulo: 'English’s Clic 5 Años',
       nivel: 'Educación Inicial',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 3,
       alt: 'English’s Clic 5 Años'
   },
@@ -58,7 +66,7 @@ const files = [
       titulo: 'English’s Clic 1° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 4,
       alt: 'English’s Clic 1° Primaria'
   },
@@ -66,7 +74,7 @@ const files = [
       titulo: 'English’s Clic 2° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 5,
       alt: 'English’s Clic 2° Primaria'
   },
@@ -74,7 +82,7 @@ const files = [
       titulo: 'English’s Clic 3° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 6,
       alt: 'English’s Clic 3° Primaria'
   },
@@ -82,7 +90,7 @@ const files = [
       titulo: 'English’s Clic 4° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 7,
       alt: 'English’s Clic 4° Primaria'
   },
@@ -90,7 +98,7 @@ const files = [
       titulo: 'English’s Clic 5° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 8,
       alt: 'English’s Clic 5° Primaria'
   },
@@ -98,7 +106,7 @@ const files = [
       titulo: 'English’s Clic 6° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 9,
       alt: 'English’s Clic 6° Primaria'
   },
@@ -106,7 +114,7 @@ const files = [
       titulo: 'English’s Clic 1° Secundaria',
       nivel: 'Educación Secundaria',  
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 10,
       alt: 'English’s Clic 1° Secundaria'
   },
@@ -114,7 +122,7 @@ const files = [
       titulo: 'English’s Clic 2° Secundaria',
       nivel: 'Educación Secundaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 11,
       alt: 'English’s Clic 2° Secundaria'
   },
@@ -122,7 +130,7 @@ const files = [
       titulo: 'English’s Clic 3° Secundaria',
       nivel: 'Educación Secundaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 12,
       alt: 'English’s Clic 3° Secundaria'
   },
@@ -130,7 +138,7 @@ const files = [
       titulo: 'English’s Clic 4° Secundaria',
       nivel: 'Educación Secundaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 13,
       alt: 'English’s Clic 4° Secundaria'
   },
@@ -138,7 +146,7 @@ const files = [
       titulo: 'English’s Clic 5° Secundaria',
       nivel: 'Educación Secundaria',
       content: 'Libro de Actividades de Inglés y DVD Audiovisual.',
-      price: 10.00,
+      price: 95.00,
       id: 14,
       alt: 'English’s Clic 5° Secundaria'
   },
@@ -146,7 +154,7 @@ const files = [
       titulo: 'Computación 3 Años',
       nivel: 'Educación Inicial',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 15,
       alt: 'Computación 3 Años'
   },
@@ -154,7 +162,7 @@ const files = [
       titulo: 'Computación 4 Años',
       nivel: 'Educación Inicial',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 16,
       alt: 'Computación 4 Años'
   },
@@ -162,7 +170,7 @@ const files = [
       titulo: 'Computación 5 Años',
       nivel: 'Educación Inicial',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 17,
       alt: 'Computación 5 Años'
   },
@@ -170,7 +178,7 @@ const files = [
       titulo: 'Computación 1° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 18,
       alt: 'Computación 1° Primaria'
   },
@@ -178,7 +186,7 @@ const files = [
       titulo: 'Computación 2° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 19,
       alt: 'Computación 2° Primaria'
   },
@@ -186,7 +194,7 @@ const files = [
       titulo: 'Computación 3° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 20,
       alt: 'Computación 3° Primaria'
   },
@@ -194,7 +202,7 @@ const files = [
       titulo: 'Computación 4° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 21,
       alt: 'Computación 4° Primaria'
   },
@@ -202,7 +210,7 @@ const files = [
       titulo: 'Computación 5° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 22,
       alt: 'Computación 5° Primaria'
   },
@@ -210,7 +218,7 @@ const files = [
       titulo: 'Computación 6° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 23,
       alt: 'Computación 6° Primaria'
   },
@@ -218,7 +226,7 @@ const files = [
       titulo: 'Computación 1° Secundaria',
       nivel: 'Educación Secundaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 24,
       alt: 'Computación 1° Secundaria'
   },
@@ -226,7 +234,7 @@ const files = [
       titulo: 'Computación 2° Secundaria',
       nivel: 'Educación Secundaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 25,
       alt: 'Computación 2° Secundaria'
   },
@@ -234,7 +242,7 @@ const files = [
       titulo: 'Computación 3° Secundaria',
       nivel: 'Educación Secundaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 26,
       alt: 'Computación 3° Secundaria'
   },
@@ -242,7 +250,7 @@ const files = [
       titulo: 'Computación 4° Secundaria',
       nivel: 'Educación Secundaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 27,
       alt: 'Computación 4° Secundaria'
   },
@@ -250,7 +258,7 @@ const files = [
       titulo: 'Computación 5° Secundaria',
       nivel: 'Educación Secundaria',
       content: 'Libro de Actividades de Computación Informática y DVD Audiovisual.',
-      price: 10.00,
+      price: 90.00,
       id: 28,
       alt: 'Computación 5° Secundaria'
   },
@@ -258,7 +266,7 @@ const files = [
       titulo: 'Lectura 1° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 29,
       alt: 'Lectura 1° Primaria'
   },
@@ -266,7 +274,7 @@ const files = [
       titulo: 'Lectura 2° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 30,
       alt: 'Lectura 2° Primaria'
   },
@@ -274,7 +282,7 @@ const files = [
       titulo: 'Lectura 3° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 31,
       alt: 'Lectura 3° Primaria'
   },
@@ -282,7 +290,7 @@ const files = [
       titulo: 'Lectura 4° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 32,
       alt: 'Lectura 4° Primaria'
   },
@@ -290,7 +298,7 @@ const files = [
       titulo: 'Lectura 5° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 33,
       alt: 'Lectura 5° Primaria'
   },
@@ -298,7 +306,7 @@ const files = [
       titulo: 'Lectura 6° Primaria',
       nivel: 'Educación Primaria', 
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 34,
       alt: 'Lectura 6° Primaria'
   },

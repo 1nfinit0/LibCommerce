@@ -3,7 +3,7 @@ const libLectura = [
       titulo: 'Lectura 1° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 29,
       alt: 'Lectura 1° Primaria'
   },
@@ -11,7 +11,7 @@ const libLectura = [
       titulo: 'Lectura 2° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 30,
       alt: 'Lectura 2° Primaria'
   },
@@ -19,7 +19,7 @@ const libLectura = [
       titulo: 'Lectura 3° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 31,
       alt: 'Lectura 3° Primaria'
   },
@@ -27,7 +27,7 @@ const libLectura = [
       titulo: 'Lectura 4° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 32,
       alt: 'Lectura 4° Primaria'
   },
@@ -35,7 +35,7 @@ const libLectura = [
       titulo: 'Lectura 5° Primaria',
       nivel: 'Educación Primaria',
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 33,
       alt: 'Lectura 5° Primaria'
   },
@@ -43,7 +43,7 @@ const libLectura = [
       titulo: 'Lectura 6° Primaria',
       nivel: 'Educación Primaria', 
       content: 'Libro de Lectura, Cuaderno de Actividades y CD Audiovisual.',
-      price: 10.00,
+      price: 50.00,
       id: 34,
       alt: 'Lectura 6° Primaria'
   },
