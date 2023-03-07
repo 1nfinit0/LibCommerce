@@ -1,4 +1,4 @@
-# INFO XXI (e-coomerce bookstore)
+# INFO XXI (e-commerce bookstore)
 
 Este proyecto es un e-commerce de venta de libros que utiliza un enfoque distinto al de las bases de datos tradicionales. En su lugar, utiliza la tecnología de LocalStorage de JavaScript para almacenar los productos seleccionados por los usuarios. Además, cuenta con una integración con WhatsApp como método de pago, facilitando el proceso de compra para los clientes. La lógica de programación se basa en el uso de JavaScript, HTML y CSS, y se enfoca en ofrecer una experiencia de usuario sencilla e intuitiva. Todo el código del proyecto está disponible públicamente y es altamente personalizable y escalable para adaptarse a las necesidades de cualquier negocio de e-commerce
 
